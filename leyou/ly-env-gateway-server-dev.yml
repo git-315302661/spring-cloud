@@ -7,7 +7,7 @@ eureka:
     lease-renewal-interval-in-seconds: 5
 leyou:
   gateway:
-    configValue: Hello
+    configValue: Hello123
     filter:
       allowPaths:
         - /api/gateway/allowPath
