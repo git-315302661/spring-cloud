@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: ly-env-gateway-server
+server:
+  port: 9020
