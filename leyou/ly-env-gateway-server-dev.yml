@@ -1,12 +1,37 @@
-spring:
-  application:
-    name: ly-env-gateway-server
-server:
-  port: 9020
 eureka:
   client:
     service-url:
       defaultZone: http://mchaha:mcha123@localhost:9010/eureka/
   instance:
-    lease-renewal-interval-in-seconds: 5 # 5秒钟发送一次心跳
-    lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期
+    lease-expiration-duration-in-seconds: 10
+    lease-renewal-interval-in-seconds: 5
+leyou:
+  gateway:
+    configValue: Hello
+    filter:
+      allowPaths:
+        - /api/gateway/allowPath
+      forbidPaths:
+        - /api/gateway/forbidPath
+server:
+  port: 9020
+spring:
+  application:
+    name: ly-env-gateway-server
+  cloud:
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  rabbitmq:
+    host: localhost
+    password: guest
+    port: 5672
+    username: guest
+    virtual-host: /
+zuul:
+  prefix: /api
+  routes:
+    ly-env-gateway-server:
+      path: /gateway/** # 以/api/gateway/**开头的请求，全部由网关服务处理
+      strip-prefix: false # 不截断/gateway
