@@ -1,0 +1,11 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+  application:
+    name: ly-server-sms
+server:
+  port: 9030
