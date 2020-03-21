@@ -25,8 +25,8 @@ eureka:
     service-url:
       defaultZone: http://mchaha:mcha123@localhost:9010/eureka/
   instance:
-    lease-expiration-duration-in-seconds: 10
     lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 10
 zuul:
   prefix: /api
   routes:
