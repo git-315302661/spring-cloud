@@ -9,3 +9,7 @@ spring:
     virtual-host: /
   application:
     name: ly-server-sms
+leyou:
+  sms:
+    accessKeyId: ""
+    accessKeySecret: ""
