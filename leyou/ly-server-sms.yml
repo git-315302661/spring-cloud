@@ -13,3 +13,5 @@ leyou:
   sms:
     accessKeyId: ""
     accessKeySecret: ""
+    signName: ""
+    templateCode: ""
