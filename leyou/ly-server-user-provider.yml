@@ -1,3 +1,5 @@
+server:
+  port: 9025
 spring:
   application:
     name: ly-server-user-provider
@@ -30,8 +32,6 @@ spring:
         enabled: true
     sampler:
       probability: 1.0 # 将采样比例设置为 1.0，也就是全部都需要。默认是 0.1
-server:
-  port: 9025
 eureka:
   client:
     service-url:

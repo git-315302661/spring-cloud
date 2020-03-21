@@ -1,18 +1,3 @@
-eureka:
-  client:
-    service-url:
-      defaultZone: http://mchaha:mcha123@localhost:9010/eureka/
-  instance:
-    lease-expiration-duration-in-seconds: 10
-    lease-renewal-interval-in-seconds: 5
-leyou:
-  gateway:
-    configValue: Hello World!
-    filter:
-      allowPaths:
-        - /api/gateway/allowPath
-      forbidPaths:
-        - /api/gateway/forbidPath
 server:
   port: 9020
 spring:
@@ -35,9 +20,24 @@ spring:
         enabled: true
     sampler:
       probability: 1.0 # 将采样比例设置为 1.0，也就是全部都需要。默认是 0.1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://mchaha:mcha123@localhost:9010/eureka/
+  instance:
+    lease-expiration-duration-in-seconds: 10
+    lease-renewal-interval-in-seconds: 5
 zuul:
   prefix: /api
   routes:
     ly-env-gateway-server:
       path: /gateway/** # 以/api/gateway/**开头的请求，全部由网关服务处理
       strip-prefix: false # 不截断/gateway
+leyou:
+  gateway:
+    configValue: Hello World!
+    filter:
+      allowPaths:
+        - /api/gateway/allowPath
+      forbidPaths:
+        - /api/gateway/forbidPath

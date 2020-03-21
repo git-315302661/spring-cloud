@@ -1,3 +1,5 @@
+server:
+  port: 9030
 spring:
   rabbitmq:
     host: localhost
@@ -7,5 +9,3 @@ spring:
     virtual-host: /
   application:
     name: ly-server-sms
-server:
-  port: 9030
