@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: ly-server-auth-provider
+  redis:
+    host: localhost
   cloud:
     bus:
       trace:
@@ -27,3 +29,9 @@ eureka:
   instance:
     lease-renewal-interval-in-seconds: 5 # 5秒钟发送一次心跳
     lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期
+leyou:
+  jwt:
+    secret: leyoumall
+    pubKeyPath: C:/temp/leyoumall/rsa/rsa.pub
+    priKeyPath: C:/temp/leyoumall/rsa/rsa.pri
+    expire: 1 #单位分钟
