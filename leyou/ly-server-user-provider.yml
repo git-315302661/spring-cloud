@@ -5,7 +5,7 @@ spring:
     name: ly-server-user-provider
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/zuoben?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/leyou_user?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
     username: devuser
     password: 123456
   redis:
