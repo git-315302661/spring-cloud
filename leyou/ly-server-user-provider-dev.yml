@@ -17,6 +17,9 @@ spring:
       trace:
         enabled: true
       enabled: true
+    loadbalancer:
+      ribbon:
+        enabled: false
   rabbitmq:
     host: localhost
     port: 5672
