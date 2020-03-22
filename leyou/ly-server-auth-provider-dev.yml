@@ -32,6 +32,6 @@ eureka:
 leyou:
   jwt:
     secret: leyoumall
-    pubKeyPath: C:/temp/leyoumall/rsa/rsa.pub
-    priKeyPath: C:/temp/leyoumall/rsa/rsa.pri
+    pubKeyPath: D:/git/spring-cloud/leyou/rsa/rsa.pub
+    priKeyPath: D:/git/spring-cloud/leyou/rsa/rsa.pri
     expire: 1 #单位分钟
