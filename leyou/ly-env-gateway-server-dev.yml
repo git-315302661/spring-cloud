@@ -28,11 +28,22 @@ eureka:
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
 zuul:
-  prefix: /api
+  prefix: /api # 添加路由前缀
   routes:
-    ly-env-gateway-server:
-      path: /gateway/** # 以/api/gateway/**开头的请求，全部由网关服务处理
-      strip-prefix: false # 不截断/gateway
+    ly-env-gateway-server: 
+      path: /gateway/** # 以/api/gateway/**开头的请求，全部由网关微服务处理
+      strip-prefix: false
+    ly-server-user-provider: 
+      path: /user/**
+      strip-prefix: false # 不截断/user
+    ly-server-auth-provider:
+      path: /auth/**
+      strip-prefix: false
+    ly-server-search:
+      path: /search/**
+    ly-server-cart:
+      path: /cart/**
+      strip-prefix: false
 leyou:
   gateway:
     configValue: Hello World!
