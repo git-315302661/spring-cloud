@@ -34,7 +34,7 @@ eureka:
     lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期
 leyou:
   jwt:
-    secret: leyoumall
-    pubKeyPath: D:/git/leyou-rsa/rsa/rsa.pub
-    priKeyPath: D:/git/leyou-rsa/rsa/rsa.pri
+    secret: fenge-leyou
+    pubKeyPath: D:/git/leyou-rsa/rsa.pub
+    priKeyPath: D:/git/leyou-rsa/rsa.pri
     expire: 1 #单位分钟
