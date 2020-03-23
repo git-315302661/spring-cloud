@@ -3,6 +3,7 @@ server:
 spring:
   application:
     name: ly-server-item-provider
+  # 数据库配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/leyou_item?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
@@ -13,6 +14,9 @@ spring:
       trace:
         enabled: true
       enabled: true
+    loadbalancer:
+      ribbon:
+        enabled: false
   rabbitmq:
     host: localhost
     port: 5672
