@@ -1,3 +1,5 @@
+server:
+  port: 9040
 spring:
   application:
     name: ly-server-item-provider
@@ -6,11 +8,6 @@ spring:
     url: jdbc:mysql://localhost:3306/leyou_item?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
     username: devuser
     password: 123456
-  jpa:
-    database: MYSQL
-    hibernate:
-      ddl-auto: update
-    show-sql: true
   cloud:
     bus:
       trace:
@@ -28,8 +25,6 @@ spring:
         enabled: true
     sampler:
       probability: 1.0 # 将采样比例设置为 1.0，也就是全部都需要。默认是 0.1
-server:
-  port: 9040
 eureka:
   client:
     service-url:
