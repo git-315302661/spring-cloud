@@ -57,5 +57,8 @@ leyou:
     filter:
       allowPaths:
         - /api/gateway/allowPath
+        - /api/auth/accredit
+        - /api/auth/verify
+        - /api/auth/logout
       forbidPaths:
         - /api/gateway/forbidPath
