@@ -4,7 +4,8 @@ spring:
   application:
     name: ly-server-auth-provider
   redis:
-    host: localhost
+    host: 192.168.124.99
+    
   cloud:
     bus:
       trace:
