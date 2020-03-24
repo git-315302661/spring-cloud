@@ -5,7 +5,7 @@ spring:
     name: ly-server-auth-provider
   redis:
     host: 192.168.124.99
-    
+
   cloud:
     bus:
       trace:
@@ -15,7 +15,7 @@ spring:
       ribbon:
         enabled: false
   rabbitmq:
-    host: localhost
+    host: 192.168.124.99
     port: 5672
     username: guest
     password: guest
