@@ -10,7 +10,7 @@ spring:
     username: devuser
     password: 123456
   redis:
-    host: localhost
+    host: 192.168.124.99
 
   cloud:
     bus:
