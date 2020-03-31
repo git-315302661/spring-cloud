@@ -1,0 +1,62 @@
+# 配置中心
+# 应用端口
+server:
+  port: 9015
+spring:
+  application:
+    #  应用名称
+    name: xyz-env-config-server
+  cloud:
+    config:
+      server:
+        git:
+          # 指向git仓库地址
+          uri: https://github.com/git-315302661/spring-cloud.git
+          # 指定配置文件所在的目录
+          search-paths: xyz-school
+          # 如果git仓库设置为私有，则需要配置用户名和密码
+          # username: git-315302661
+          # password: ******
+    bus:
+      # 应用程序实例的标识id
+      id: ${spring.application.name}:${server.port}
+      # 启用消息总线，默认为true：启用
+      enabled: true
+      trace:
+        # 开启消息追踪，默认false：关闭
+        enabled: true
+    # rabbitmq配置信息
+    rabbitmq:
+      # rabbitmq主机ip
+      host: 192.168.124.99
+      # rabbitmq应用端口
+      port: 5672
+      # 用户名
+      username: guest
+      # 密码
+      password: guest
+eureka:
+  client:
+    # 配置与Eureka Server交互的地址，客户端的查询服务和注册服务都需要依赖这个地址
+    service-url:
+      defaultZone: http://mchaha:mcha123@localhost:9010/eureka/
+  instance:
+    # 租约续订时间间隔，以秒为单位，这里是5秒。默认是30秒
+    lease-renewal-interval-in-seconds: 5
+    # 租约到期持续时间，以秒为单位，这里是10秒。默认是90秒
+    lease-expiration-duration-in-seconds: 10
+management:
+  endpoints:
+    web:
+      exposure:
+        # Spring Cloud Bus提供了2个执行器端点，/actuator/bus-refresh and /actuator/bus-env
+          ## 执行/actuator/bus-refresh端点会清除RefreshScope缓存并重新绑定 @ConfigurationProperties
+          ## 要公开/actuator/bus-refresh端点，需要向应用程序添加以下配置：
+          ## management.endpoints.web.exposure.include=bus-refresh
+          ## /actuator/bus-env端点更新与在多个实例中的指定键/值对每个实例的环境
+          ## 要公开/actuator/bus-env端点，需要向应用程序添加以下配置：
+          ## management.endpoints.web.exposure.include=bus-env
+        include: bus-refresh, bus-env
+  endpoint:
+    health:
+      show-details: always
