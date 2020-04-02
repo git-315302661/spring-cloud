@@ -26,6 +26,7 @@ spring:
       username: guest
       # 密码
       password: guest
+      virtual-host: /
     sleuth:
       web:
         client:
@@ -35,7 +36,7 @@ spring:
     zipkin:
       # zipkin服务器的地址
       base-url: http://192.168.124.99:9411/
-      
+
 # 网关配置
 zuul:
   # 路由前缀
