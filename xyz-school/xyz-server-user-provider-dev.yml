@@ -1,11 +1,19 @@
 # 应用端口号
 server:
-  port: 9020
+  port: 9025
 spring:
   application:
     # 应用名称
     name: xyz-env-gateway-server
-    
+  # 数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/xyz_user?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+  redis:
+    host: 192.168.124.99
+
   # spring-cloud相关配置
   cloud:
     bus:
@@ -37,15 +45,3 @@ spring:
       base-url: http://192.168.124.99:9411/
       sender:
         type: web  # 设置使用http的方式传输数据
-# 网关配置
-zuul:
-  # 路由前缀
-  prefix: /api
-  routes:
-    xyz-env-gateway-server:
-      # 以/api/gateway/**开头的请求，全部由网关微服务处理
-      path: /gateway/**
-  host:
-    max-per-route-connections: 60000
-    socket-timeout-millis: 60000
-    connect-timeout-millis: 60000
