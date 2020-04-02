@@ -1,0 +1,60 @@
+# 应用端口号
+server:
+  port: 9020
+spring:
+  application:
+    # 应用名称
+    name: ly-env-gateway-server
+  cloud:
+    bus:
+      # 应用程序实例的标识id
+      id: ${spring.application.name}:${server.port}
+      # 启用消息总线，默认为true：启用
+      enabled: true
+      trace:
+        # 开启消息追踪，默认false：关闭
+        enabled: true
+    # rabbitmq配置信息
+    rabbitmq:
+      # rabbitmq主机ip
+      host: 192.168.124.99
+      # rabbitmq应用端口
+      port: 5672
+      # 用户名
+      username: guest
+      # 密码
+      password: guest
+    sleuth:
+      web:
+        client:
+          enabled: true
+      sampler:
+        probability: 1.0 # 将采样比例设置为 1.0，也就是全部都需要。默认是 0.1
+    zipkin:
+      # zipkin服务器的地址
+      base-url: http://192.168.124.99:9411/
+      sender:
+        type: web  # 设置使用http的方式传输数据
+# Eureka客户端配置
+eureka:
+  client:
+    # 配置与Eureka Server交互的地址，客户端的查询服务和注册服务都需要依赖这个地址
+    service-url:
+      defaultZone: http://mchaha:mcha123@localhost:9010/eureka/
+  instance:
+    # 租约续订时间间隔，以秒为单位，这里是5秒。默认是30秒
+    lease-renewal-interval-in-seconds: 5
+    # 租约到期持续时间，以秒为单位，这里是10秒。默认是90秒
+    lease-expiration-duration-in-seconds: 10
+# 网关配置
+zuul:
+  # 路由前缀
+  prefix: /api
+  routes:
+    xyz-env-gateway-server:
+      # 以/api/gateway/**开头的请求，全部由网关微服务处理
+      path: /gateway/**
+  host:
+    max-per-route-connections: 60000
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
