@@ -35,8 +35,7 @@ spring:
     zipkin:
       # zipkin服务器的地址
       base-url: http://192.168.124.99:9411/
-      sender:
-        type: web  # 设置使用http的方式传输数据
+      
 # 网关配置
 zuul:
   # 路由前缀
