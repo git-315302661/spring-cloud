@@ -53,10 +53,10 @@ zuul:
     xyz-env-gateway-server:
       # 以/api/gateway/**开头的请求，全部由网关微服务处理
       path: /gateway/**
-    ly-server-user-provider: 
+    xyz-server-user-provider: 
       path: /user/**
       strip-prefix: false # 不截断/user
-    ly-server-auth-provider:
+    xyz-server-auth-provider:
       path: /auth/**
       strip-prefix: false
   host:
