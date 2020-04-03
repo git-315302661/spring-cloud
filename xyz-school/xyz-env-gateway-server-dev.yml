@@ -16,26 +16,26 @@ spring:
       trace:
         # 开启消息追踪，默认false：关闭
         enabled: true
-    # rabbitmq配置信息
-    rabbitmq:
-      # rabbitmq主机ip
-      host: 192.168.124.99
-      # rabbitmq应用端口
-      port: 5672
-      # 用户名
-      username: guest
-      # 密码
-      password: guest
-      virtual-host: /
-    sleuth:
-      web:
-        client:
-          enabled: true
-      sampler:
-        probability: 1.0 # 将采样比例设置为 1.0，也就是全部都需要。默认是 0.1
-    zipkin:
-      # zipkin服务器的地址
-      base-url: http://192.168.124.99:9411/
+  # rabbitmq配置信息
+  rabbitmq:
+    # rabbitmq主机ip
+    host: 192.168.124.99
+    # rabbitmq应用端口
+    port: 5672
+    # 用户名
+    username: guest
+    # 密码
+    password: guest
+    virtual-host: /
+  sleuth:
+    web:
+      client:
+        enabled: true
+    sampler:
+      probability: 1.0 # 将采样比例设置为 1.0，也就是全部都需要。默认是 0.1
+  zipkin:
+    # zipkin服务器的地址
+    base-url: http://192.168.124.99:9411/
 
 # 网关配置
 zuul:
