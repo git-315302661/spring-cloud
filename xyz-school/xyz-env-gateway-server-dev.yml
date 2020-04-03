@@ -1,12 +1,14 @@
 # 应用端口号
 server:
   port: 9020
+
+#spring配置
 spring:
   application:
     # 应用名称
     name: xyz-env-gateway-server
     
-  # spring-cloud相关配置
+  # spring-cloud配置
   cloud:
     bus:
       # 应用程序实例的标识id
@@ -16,7 +18,8 @@ spring:
       trace:
         # 开启消息追踪，默认false：关闭
         enabled: true
-  # rabbitmq配置信息
+
+  # rabbitmq配置
   rabbitmq:
     # rabbitmq主机ip
     host: 192.168.124.99
@@ -27,6 +30,8 @@ spring:
     # 密码
     password: guest
     virtual-host: /
+
+  # sleuth + zipkin配置
   sleuth:
     web:
       client:
@@ -52,6 +57,8 @@ zuul:
     max-per-route-connections: 60000
     socket-timeout-millis: 60000
     connect-timeout-millis: 60000
+
+# 其它参数配置
 leyou:
   gateway:
     configValue: Hello World!

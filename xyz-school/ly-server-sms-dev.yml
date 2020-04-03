@@ -1,22 +1,13 @@
 # 应用端口号
 server:
-  port: 9025
-
+  port: 9030
+  
 #spring配置
 spring:
   application:
     # 应用名称
-    name: xyz-server-user-provider
-  # 数据库配置
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.124.99:3306/xyz_user?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
-    username: root
-    password: 123456
-  redis:
-    host: 192.168.124.99
-    port: 6379
-
+    name: ly-server-sms
+  
   # spring-cloud配置
   cloud:
     bus:
@@ -50,3 +41,11 @@ spring:
   zipkin:
     # zipkin服务器的地址
     base-url: http://192.168.124.99:9411/
+
+# 其它参数配置    
+leyou:
+  sms:
+    accessKeyId: ""
+    accessKeySecret: ""
+    signName: ""
+    templateCode: ""
