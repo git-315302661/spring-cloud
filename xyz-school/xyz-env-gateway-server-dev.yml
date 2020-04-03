@@ -53,6 +53,9 @@ zuul:
     ly-server-user-provider: 
       path: /user/**
       strip-prefix: false # 不截断/user
+    ly-server-auth-provider:
+      path: /auth/**
+      strip-prefix: false
   host:
     max-per-route-connections: 60000
     socket-timeout-millis: 60000
