@@ -32,7 +32,7 @@ spring:
     virtual-host: /
 
 # 其它参数配置    
-leyou:
+xyz:
   sms:
     accessKeyId: ""
     accessKeySecret: ""

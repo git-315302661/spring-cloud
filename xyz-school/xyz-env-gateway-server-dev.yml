@@ -62,7 +62,7 @@ zuul:
     connect-timeout-millis: 60000
 
 # 其它参数配置
-leyou:
+xyz:
   gateway:
     configValue: Hello World!
     filter:
