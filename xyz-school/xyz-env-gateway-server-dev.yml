@@ -69,10 +69,11 @@ xyz:
   gateway:
     configValue: Hello World!
     filter:
-      allowPaths:
-        - /api/gateway/allowPath
-        - /api/auth/accredit
-        - /api/auth/verify
-        - /api/auth/logout
-      forbidPaths:
-        - /api/gateway/forbidPath
+      path:
+        allowPaths:
+          - /api/gateway/allowPath
+          - /api/auth/accredit
+          - /api/auth/verify
+          - /api/auth/logout
+        forbidPaths:
+          - /api/gateway/forbidPath

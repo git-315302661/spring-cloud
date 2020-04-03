@@ -12,6 +12,7 @@ spring:
   # redis配置
   redis:
     host: 192.168.124.99
+    port: 6379
 
   # spring-cloud配置
   cloud:
