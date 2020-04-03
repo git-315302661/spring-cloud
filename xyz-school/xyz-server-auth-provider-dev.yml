@@ -1,0 +1,54 @@
+# 应用端口号
+server:
+  port: 9035
+  
+#spring配置
+spring:
+  application:
+    # 应用名称
+    name: ly-server-auth-provider
+
+  # redis配置
+  redis:
+    host: 192.168.124.99
+
+  # spring-cloud配置
+  cloud:
+    bus:
+      # 应用程序实例的标识id
+      id: ${spring.application.name}:${server.port}
+      # 启用消息总线，默认为true：启用
+      enabled: true
+      trace:
+        # 开启消息追踪，默认false：关闭
+        enabled: true
+
+  # rabbitmq配置
+  rabbitmq:
+    # rabbitmq主机ip
+    host: 192.168.124.99
+    # rabbitmq应用端口
+    port: 5672
+    # 用户名
+    username: guest
+    # 密码
+    password: guest
+    virtual-host: /
+
+  # sleuth + zipkin配置
+  sleuth:
+    web:
+      client:
+        enabled: true
+    sampler:
+      probability: 1.0 # 将采样比例设置为 1.0，也就是全部都需要。默认是 0.1
+  zipkin:
+    # zipkin服务器的地址
+    base-url: http://192.168.124.99:9411/
+
+xyz:
+  jwt:
+    secret: fenge-xyz
+    pubKeyPath: D:/git/rsa/xyz-rsa/rsa.pub
+    priKeyPath: D:/git/rsa/xyz-rsa/rsa.pri
+    expire: 1 #单位分钟
