@@ -7,7 +7,7 @@ spring:
   application:
     # 应用名称
     name: xyz-server-user-provider
-    
+
   # 数据库配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -28,6 +28,9 @@ spring:
       trace:
         # 开启消息追踪，默认false：关闭
         enabled: true
+    loadbalancer:
+      ribbon:
+        enabled: false
 
   # rabbitmq配置
   rabbitmq:

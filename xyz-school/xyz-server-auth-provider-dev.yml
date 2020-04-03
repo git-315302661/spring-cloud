@@ -23,6 +23,9 @@ spring:
       trace:
         # 开启消息追踪，默认false：关闭
         enabled: true
+    loadbalancer:
+      ribbon:
+        enabled: false
 
   # rabbitmq配置
   rabbitmq:
