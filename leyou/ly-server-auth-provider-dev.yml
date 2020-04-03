@@ -36,6 +36,6 @@ eureka:
 leyou:
   jwt:
     secret: fenge-leyou
-    pubKeyPath: D:/git/leyou-rsa/rsa.pub
-    priKeyPath: D:/git/leyou-rsa/rsa.pri
+    pubKeyPath: D:/git/rsa/leyou-rsa/rsa.pub
+    priKeyPath: D:/git/rsa/leyou-rsa/rsa.pri
     expire: 1 #单位分钟
