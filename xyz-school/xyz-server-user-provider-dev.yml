@@ -14,6 +14,8 @@ spring:
     url: jdbc:mysql://192.168.124.99:3306/xyz_user?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
     username: root
     password: 123456
+    
+  # redis配置
   redis:
     host: 192.168.124.99
     port: 6379
@@ -54,3 +56,8 @@ spring:
   zipkin:
     # zipkin服务器的地址
     base-url: http://192.168.124.99:9411/
+
+
+snowflake:
+  datacenter: 1 # 数据中心的id
+  bizType: user_id_ # 业务类型
