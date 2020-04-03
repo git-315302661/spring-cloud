@@ -6,7 +6,7 @@ server:
 spring:
   application:
     # 应用名称
-    name: ly-server-sms
+    name: xyz-server-sms
   
   # spring-cloud配置
   cloud:
