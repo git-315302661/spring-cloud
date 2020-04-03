@@ -6,8 +6,8 @@ server:
 spring:
   application:
     # 应用名称
-    name: ly-server-auth-provider
-    
+    name: xyz-server-auth-provider
+
   # 数据库配置
   # redis配置
   redis:
