@@ -31,17 +31,6 @@ spring:
     password: guest
     virtual-host: /
 
-  # sleuth + zipkin配置
-  sleuth:
-    web:
-      client:
-        enabled: true
-    sampler:
-      probability: 1.0 # 将采样比例设置为 1.0，也就是全部都需要。默认是 0.1
-  zipkin:
-    # zipkin服务器的地址
-    base-url: http://192.168.124.99:9411/
-
 # 其它参数配置    
 leyou:
   sms:
