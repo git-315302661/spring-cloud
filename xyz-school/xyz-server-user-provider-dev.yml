@@ -61,3 +61,10 @@ spring:
 snowflake:
   datacenter: 1 # 数据中心的id
   bizType: user_id_ # 业务类型
+
+
+auth:
+    user:
+        token-header: Authorization
+        userId-header: userId
+        userName-header: userName
