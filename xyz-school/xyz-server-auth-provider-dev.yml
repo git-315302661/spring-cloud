@@ -58,8 +58,6 @@ xyz:
     pubKeyPath: D:/git/rsa/xyz-rsa/rsa.pub
     priKeyPath: D:/git/rsa/xyz-rsa/rsa.pri
     expire: 1 #单位分钟
-
-xyz:
   auth:
     user:
       token-header: Authorization
