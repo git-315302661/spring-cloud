@@ -64,7 +64,7 @@ snowflake:
 
 
 auth:
-    user:
-        token-header: Authorization
-        userId-header: userId
-        userName-header: userName
+  user:
+    token-header: Authorization
+    userId-header: userId
+    userName-header: userName
