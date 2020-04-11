@@ -77,3 +77,9 @@ xyz:
           - /api/auth/logout
         forbidPaths:
           - /api/gateway/forbidPath
+  
+  jwt:
+    secret: fenge-xyz
+    pubKeyPath: D:/git/rsa/xyz-rsa/rsa.pub
+    priKeyPath: D:/git/rsa/xyz-rsa/rsa.pri
+    expire: 1 #单位分钟
