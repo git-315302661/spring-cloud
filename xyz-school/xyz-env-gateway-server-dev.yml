@@ -7,6 +7,12 @@ spring:
   application:
     # 应用名称
     name: xyz-env-gateway-server
+
+  # 数据库配置
+  # redis配置
+  redis:
+    host: 192.168.124.99
+    port: 6379
     
   # spring-cloud配置
   cloud:
