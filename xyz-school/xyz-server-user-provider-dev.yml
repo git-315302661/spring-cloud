@@ -63,6 +63,12 @@ snowflake:
   bizType: user_id_ # 业务类型
 
 xyz:
+  jwt:
+    token-header: Authorization
+    secret: fenge-xyz
+    pubKeyPath: D:/git/rsa/xyz-rsa/rsa.pub
+    priKeyPath: D:/git/rsa/xyz-rsa/rsa.pri
+    expire: 1 #单位分钟
   auth:
     user:
       token-header: Authorization
