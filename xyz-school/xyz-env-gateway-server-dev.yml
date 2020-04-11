@@ -81,6 +81,12 @@ xyz:
           - /api/auth/accredit
           - /api/auth/verify
           - /api/auth/logout
+          - /api/user/list
+          - /api/user/selectById
+          - /api/user/save
+          - /api/user/update
+          - /api/user/disable
+          - /api/user/delete
         forbidPaths:
           - /api/gateway/forbidPath
   
