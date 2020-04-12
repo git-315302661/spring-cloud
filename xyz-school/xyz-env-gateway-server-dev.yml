@@ -56,6 +56,8 @@ zuul:
   # 路由前缀
   prefix: /api
   routes:
+    xyz-env-gateway-server: 
+      path: /gateway/**
     xyz-server-user-provider: 
       path: /user/**
       strip-prefix: false
