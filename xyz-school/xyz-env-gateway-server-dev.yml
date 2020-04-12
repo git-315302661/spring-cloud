@@ -82,7 +82,6 @@ xyz:
           - /api/auth/logout
         forbidPaths:
           - /api/gateway/forbidPath
-  
   jwt:
     token-header: Authorization
     secret: fenge-xyz
