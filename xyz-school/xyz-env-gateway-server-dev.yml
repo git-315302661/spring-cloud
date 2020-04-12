@@ -53,6 +53,7 @@ spring:
 
 # 网关配置
 zuul:
+  sensitive-headers:
   # 路由前缀
   prefix: /api
   routes:
