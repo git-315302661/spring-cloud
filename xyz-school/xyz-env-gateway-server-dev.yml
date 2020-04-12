@@ -73,11 +73,9 @@ zuul:
 # 其它参数配置
 xyz:
   gateway:
-    configValue: Hello World!
     filter:
       path:
         allowPaths:
-          - /api/gateway/allowPath
           - /api/auth/accredit
           - /api/auth/verify
           - /api/auth/logout
