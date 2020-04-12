@@ -58,7 +58,7 @@ zuul:
   routes:
     xyz-server-user-provider: 
       path: /user/**
-      strip-prefix: false # 不截断/user
+      strip-prefix: false
     xyz-server-auth-provider:
       path: /auth/**
       strip-prefix: false
@@ -73,6 +73,7 @@ xyz:
     filter:
       path:
         allowPaths:
+          - /api/gateway/allowPath
           - /api/auth/accredit
           - /api/auth/verify
           - /api/auth/logout
