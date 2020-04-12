@@ -56,15 +56,12 @@ zuul:
   # 路由前缀
   prefix: /api
   routes:
-    # xyz-env-gateway-server:
-      # 以/api/gateway/**开头的请求，全部由网关微服务处理
-      # path: /gateway/**
     xyz-server-user-provider: 
       path: /user/**
-      strip-prefix: false # 不截断/user
+      #strip-prefix: false # 不截断/user
     xyz-server-auth-provider:
       path: /auth/**
-      strip-prefix: false
+      #strip-prefix: false
   host:
     max-per-route-connections: 60000
     socket-timeout-millis: 60000
