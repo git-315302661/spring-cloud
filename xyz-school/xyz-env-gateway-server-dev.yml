@@ -80,6 +80,7 @@ xyz:
           - /api/gateway/forbidPath
   
   jwt:
+    token-header: Authorization
     secret: fenge-xyz
     pubKeyPath: D:/git/rsa/xyz-rsa/rsa.pub
     priKeyPath: D:/git/rsa/xyz-rsa/rsa.pri
