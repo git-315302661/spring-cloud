@@ -57,7 +57,8 @@ zuul:
   prefix: /api
   routes:
     xyz-env-gateway-server: 
-      path: /gateway/**
+      path: /gateway/** # 以/api/gateway/**开头的请求，全部由网关微服务处理
+      strip-prefix: false
     xyz-server-user-provider: 
       path: /user/**
       strip-prefix: false
