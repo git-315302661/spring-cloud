@@ -69,7 +69,7 @@ xyz:
       userId-header: userId
       userName-header: userName
 
-#mybatis-plus配置
+# mybatis-plus配置
 mybatis-plus:
   configuration:
     # 将带有下划线的表字段映射为驼峰格式
