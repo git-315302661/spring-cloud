@@ -69,10 +69,7 @@ xyz:
       userId-header: userId
       userName-header: userName
 
-# mybatis-plus配置
 mybatis-plus:
   configuration:
-    # 将带有下划线的表字段映射为驼峰格式
-    map-underscore-to-camel-case: true
-    # 控制台打印完整带参数SQL语句
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
