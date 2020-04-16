@@ -66,6 +66,9 @@ zuul:
     xyz-server-user-provider: 
       path: /role/**
       strip-prefix: false
+    xyz-server-user-provider: 
+      path: /menu/**
+      strip-prefix: false
     xyz-server-auth-provider:
       path: /auth/**
       strip-prefix: false
