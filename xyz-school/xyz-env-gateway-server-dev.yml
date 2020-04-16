@@ -61,13 +61,7 @@ zuul:
       path: /gateway/** # 以/api/gateway/**开头的请求，全部由网关微服务处理
       strip-prefix: false
     xyz-server-user-provider: 
-      path: /user/**
-      strip-prefix: false
-    xyz-server-user-provider: 
-      path: /role/**
-      strip-prefix: false
-    xyz-server-user-provider: 
-      path: /menu/**
+      path: /user/**,/role/**,/menu/**
       strip-prefix: false
     xyz-server-auth-provider:
       path: /auth/**
