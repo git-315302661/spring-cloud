@@ -13,7 +13,7 @@ spring:
   redis:
     host: 192.168.124.99
     port: 6379
-    
+
   # spring-cloud配置
   cloud:
     bus:
@@ -57,19 +57,31 @@ zuul:
   # 路由前缀
   prefix: /api
   routes:
-    xyz-env-gateway-server: 
+    gateway:
       path: /gateway/** # 以/api/gateway/**开头的请求，全部由网关微服务处理
+      service-id: xyz-env-gateway-server
       strip-prefix: false
-    xyz-server-user-provider: 
-      path: /user/**,/role/**,/menu/**
-      strip-prefix: false
-    xyz-server-auth-provider:
+    auth:
       path: /auth/**
+      service-id: xyz-server-auth-provider
+      strip-prefix: false
+    server-user:
+      path: /user/**
+      service-id: xyz-server-user-provider
+      strip-prefix: false
+    server-role:
+      path: /role/**
+      service-id: xyz-server-user-provider
+      strip-prefix: false
+    server-menu:
+      path: /menu/**
+      service-id: xyz-server-user-provider
       strip-prefix: false
   host:
     max-per-route-connections: 60000
     socket-timeout-millis: 60000
     connect-timeout-millis: 60000
+  ribbon-isolation-strategy:
 
 # 其它参数配置
 xyz:
