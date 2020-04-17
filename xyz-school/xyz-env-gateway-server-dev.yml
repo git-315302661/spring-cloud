@@ -74,7 +74,7 @@ zuul:
       service-id: xyz-server-user-provider
       strip-prefix: false
     server-menu:
-      path: /menu/**
+      path: /permission/**
       service-id: xyz-server-user-provider
       strip-prefix: false
   host:
