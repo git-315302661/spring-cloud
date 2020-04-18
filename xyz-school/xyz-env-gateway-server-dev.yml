@@ -66,15 +66,15 @@ zuul:
       service-id: xyz-server-auth-provider
       strip-prefix: false
     server-user:
-      path: /user/**
+      path: /users/**
       service-id: xyz-server-user-provider
       strip-prefix: false
     server-role:
-      path: /role/**
+      path: /roles/**
       service-id: xyz-server-user-provider
       strip-prefix: false
     server-menu:
-      path: /permission/**
+      path: /permissions/**
       service-id: xyz-server-user-provider
       strip-prefix: false
   host:
