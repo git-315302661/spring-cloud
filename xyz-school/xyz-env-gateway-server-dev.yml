@@ -73,8 +73,12 @@ zuul:
       path: /role/**
       service-id: xyz-server-user-provider
       strip-prefix: false
-    server-menu:
+    server-permission:
       path: /permission/**
+      service-id: xyz-server-user-provider
+      strip-prefix: false
+    server-operation:
+      path: /operation/**
       service-id: xyz-server-user-provider
       strip-prefix: false
   host:
