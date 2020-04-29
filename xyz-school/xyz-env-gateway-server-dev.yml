@@ -90,6 +90,8 @@ zuul:
   semaphore:
     max-semaphores: 100
 
+# 超时配置
+# 超时设置配置不会自动提示。实测这样写是有效的。
 ribbon:
   ReadTimeout: 10000
   ConnectTimeout: 10000
