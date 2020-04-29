@@ -20,10 +20,10 @@ spring:
       # 应用程序实例的标识id
       id: ${spring.application.name}:${server.port}
       # 启用消息总线，默认为true：启用
-      enabled: true
       trace:
-        # 开启消息追踪，默认false：关闭
-        enabled: true
+        enabled: on
+      # 开启消息追踪，默认false：关闭
+      enabled: on
     loadbalancer:
       ribbon:
         enabled: false
@@ -91,8 +91,16 @@ zuul:
     max-semaphores: 100
 
 ribbon:
-  read-timeout: 10000
-  connect-timeout: 10000
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 9000
 
 # 其它参数配置
 xyz:
