@@ -82,10 +82,13 @@ zuul:
       service-id: xyz-server-user-provider
       strip-prefix: false
   host:
-    max-per-route-connections: 60000
+    max-per-route-connections: 20
+    max-total-connections: 200
     socket-timeout-millis: 60000
     connect-timeout-millis: 60000
-  ribbon-isolation-strategy:
+  ribbon-isolation-strategy: semaphore
+  semaphore:
+    max-semaphores: 100
 
 # 其它参数配置
 xyz:
