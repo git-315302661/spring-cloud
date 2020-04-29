@@ -90,6 +90,10 @@ zuul:
   semaphore:
     max-semaphores: 100
 
+ribbon:
+  read-timeout: 10000
+  connect-timeout: 10000
+
 # 其它参数配置
 xyz:
   gateway:
