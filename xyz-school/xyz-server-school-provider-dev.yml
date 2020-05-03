@@ -1,0 +1,75 @@
+# 应用端口号
+server:
+  port: 9040
+
+#spring配置
+spring:
+  application:
+    # 应用名称
+    name: xyz-server-school-provider
+
+  # 数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.124.99:3306/xyz_school?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+    
+  # redis配置
+  redis:
+    host: 192.168.124.99
+    port: 6379
+
+  # spring-cloud配置
+  cloud:
+    bus:
+      # 应用程序实例的标识id
+      id: ${spring.application.name}:${server.port}
+      # 启用消息总线，默认为true：启用
+      enabled: true
+      trace:
+        # 开启消息追踪，默认false：关闭
+        enabled: true
+    loadbalancer:
+      ribbon:
+        enabled: false
+
+  # rabbitmq配置
+  rabbitmq:
+    # rabbitmq主机ip
+    host: 192.168.124.99
+    # rabbitmq应用端口
+    port: 5672
+    # 用户名
+    username: guest
+    # 密码
+    password: guest
+    virtual-host: /
+
+  # sleuth + zipkin配置
+  sleuth:
+    web:
+      client:
+        enabled: true
+    sampler:
+      probability: 1.0 # 将采样比例设置为 1.0，也就是全部都需要。默认是 0.1
+  zipkin:
+    # zipkin服务器的地址
+    base-url: http://192.168.124.99:9411/
+
+
+snowflake:
+  datacenter: 2 # 数据中心的id
+  bizType: school_id_ # 业务类型
+
+xyz:
+  auth:
+    user:
+      token-header: Authorization
+      userId-header: userId
+      userName-header: userName
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
