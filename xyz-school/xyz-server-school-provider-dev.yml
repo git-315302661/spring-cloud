@@ -7,13 +7,21 @@ spring:
   application:
     # 应用名称
     name: xyz-server-school-provider
-
-  # 数据库配置
+    
+ # 数据源配置
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.124.99:3306/xyz_school?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
-    username: root
-    password: 123456
+    dynamic:
+      datasource:
+        dbschool_1: #数据源xyz_school
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://192.168.124.99:3306/xyz_school?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
+          username: root
+          password: 123456
+        dbdistrict_1: # 数据源xyz_district
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://192.168.124.99:3306/xyz_district?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
+          username: root
+          password: 123456
     
   # redis配置
   redis:
