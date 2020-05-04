@@ -81,6 +81,10 @@ zuul:
       path: /operation/**
       service-id: xyz-server-user-provider
       strip-prefix: false
+    server-school:
+      path: /school/**
+      service-id: xyz-server-school-provider
+      strip-prefix: false
   host:
     max-per-route-connections: 20
     max-total-connections: 200
