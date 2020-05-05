@@ -10,20 +10,10 @@ spring:
     
   # 数据源配置
   datasource:
-    dynamic: 
-      primary: dbschool #设置默认的数据源或者数据源组,默认值即为master
-      strict: false #设置严格模式,默认false不启动. 启动后在未匹配到指定数据源时候回抛出异常,不启动会使用默认数据源.
-      datasource:
-        dbschool: #数据源xyz_school
-          driver-class-name: com.mysql.cj.jdbc.Driver
-          url: jdbc:mysql://192.168.124.99:3306/xyz_school?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
-          username: root
-          password: 123456
-        dbdistrict: # 数据源xyz_district
-          driver-class-name: com.mysql.cj.jdbc.Driver
-          url: jdbc:mysql://192.168.124.99:3306/xyz_district?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
-          username: root
-          password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.124.99:3306/xyz_school?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
     
   # redis配置
   redis:
