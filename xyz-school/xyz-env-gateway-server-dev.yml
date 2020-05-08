@@ -53,7 +53,8 @@ spring:
 
 # 网关配置
 zuul:
-  sensitive-headers:
+  sensitive-headers: Cookie,Set-Cookie,Authorization #配置过滤敏感的请求头信息，设置为空就不会过滤
+  add-host-header: true #设置为true重定向是会添加host请求头
   # 路由前缀
   prefix: /api
   routes:
@@ -97,6 +98,11 @@ zuul:
   ribbon-isolation-strategy: semaphore
   semaphore:
     max-semaphores: 100
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: 'routes'
 
 # 超时配置
 # 超时设置配置不会自动提示。实测这样写是有效的。

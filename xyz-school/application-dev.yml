@@ -1,9 +1,12 @@
-# Eureka客户端配置
 eureka:
+  # Eureka客户端配置
   client:
+    fetch-registry: true #是否获取eureka服务端上注册的服务列表
     # 配置与Eureka Server交互的地址，客户端的查询服务和注册服务都需要依赖这个地址
     service-url:
       defaultZone: http://mchaha:mcha123@localhost:9010/eureka/,http://mchaha:mcha123@localhost:9011/eureka/
+    enabled: true # 启用eureka客户端
+    registry-fetch-interval-seconds: 30 #定义去eureka服务端获取服务列表的时间间隔
   instance:
     # 租约续订时间间隔，以秒为单位，这里是5秒。默认是30秒
     lease-renewal-interval-in-seconds: 5
