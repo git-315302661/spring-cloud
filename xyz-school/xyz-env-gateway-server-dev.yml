@@ -98,11 +98,11 @@ zuul:
   ribbon-isolation-strategy: semaphore
   semaphore:
     max-semaphores: 100
-  management:
-    endpoints:
-      web:
-        exposure:
-          include: 'routes'
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'routes'
 
 # 超时配置
 # 超时设置配置不会自动提示。实测这样写是有效的。
