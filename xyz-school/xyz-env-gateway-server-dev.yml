@@ -107,6 +107,9 @@ management:
     web:
       exposure:
         include: 'routes'
+  endpoint:
+    health:
+      show-details: always
 
 # 超时配置
 # 超时设置配置不会自动提示。实测这样写是有效的。
