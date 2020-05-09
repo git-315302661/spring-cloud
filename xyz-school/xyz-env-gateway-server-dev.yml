@@ -112,7 +112,8 @@ management:
       show-details: always
 
 logging:
-  file: admin-client.log #添加开启admin的日志监控
+  file:
+    name: admin-client.log
 
 # 超时配置
 # 超时设置配置不会自动提示。实测这样写是有效的。
