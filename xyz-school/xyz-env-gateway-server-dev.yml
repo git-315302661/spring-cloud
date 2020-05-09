@@ -98,18 +98,7 @@ zuul:
   ribbon-isolation-strategy: semaphore
   semaphore:
     max-semaphores: 100
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-  endpoint:
-    health:
-      show-details: always
 
-logging:
-  file:
-    name: admin-client.log
 
 # 超时配置
 # 超时设置配置不会自动提示。实测这样写是有效的。
