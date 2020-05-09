@@ -111,6 +111,10 @@ management:
     health:
       show-details: always
 
+logging:
+  file:
+    name: admin-client.log #添加开启admin的日志监控
+
 # 超时配置
 # 超时设置配置不会自动提示。实测这样写是有效的。
 ribbon:
