@@ -7,6 +7,10 @@ spring:
   application:
     # 应用名称
     name: xyz-env-gateway-server
+  boot:
+    admin:
+      client:
+        url: http://localhost:9000 #配置xyz-env-admin-server地址
 
   # 数据库配置
   # redis配置
